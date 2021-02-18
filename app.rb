@@ -3,7 +3,8 @@ require 'sinatra/base'
 class Battle < Sinatra::Base
 
   enable :sessions
-  configure(:development) { set :session_secret, “something” }
+  configure(:development) { set :session_secret, "something" }
+
 
   get '/battle' do
     erb(:index)
@@ -12,7 +13,7 @@ class Battle < Sinatra::Base
   post '/names' do
     session[:player_1] = params[:player_1]
     session[:player_2] = params[:player_2]
-    redirect /'play'
+    redirect '/play'
   end
 
   get '/play' do
