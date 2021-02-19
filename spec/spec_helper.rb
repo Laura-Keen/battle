@@ -3,6 +3,7 @@ require 'capybara/rspec'
 require 'rspec'
 require 'features/web_helpers'
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
+require 'player'
 
 ENV['RACK_ENV'] = 'test'
 Capybara.app = Battle
