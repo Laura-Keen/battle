@@ -5,3 +5,4 @@ feature "Attacking" do
     expect(page).to have_content "Bob attacked Brian"
   end
 end
+
